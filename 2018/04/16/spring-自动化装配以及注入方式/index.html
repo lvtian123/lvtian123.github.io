@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="take Jeep to LaSa.">
+<meta name="description" content="$ Spring注入方式：  1；设置注入(属性注入) ，有一个set xx的方法  2: 构造注入(构造器注入) ，有一个构造器  $ spring自动装配   其中的age , name, car-ref(都是引用) Spring IOC容器自动配置Bean 在 的autowirs属性里指定自动装配的模式例如：1：byType(根据类型自动装配)：不可取，如果多个类型相同的bean,Sprin">
 <meta property="og:type" content="article">
 <meta property="og:title" content="l&#39;tian">
-<meta property="og:url" content="http://lvtian123.github.io/2018/04/16/Spring-自动化装配/index.html">
+<meta property="og:url" content="http://lvtian123.github.io/2018/04/16/spring-自动化装配以及注入方式/index.html">
 <meta property="og:site_name" content="l&#39;tian">
-<meta property="og:description" content="take Jeep to LaSa.">
+<meta property="og:description" content="$ Spring注入方式：  1；设置注入(属性注入) ，有一个set xx的方法  2: 构造注入(构造器注入) ，有一个构造器  $ spring自动装配   其中的age , name, car-ref(都是引用) Spring IOC容器自动配置Bean 在 的autowirs属性里指定自动装配的模式例如：1：byType(根据类型自动装配)：不可取，如果多个类型相同的bean,Sprin">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-16T09:27:28.191Z">
+<meta property="og:updated_time" content="2018-04-16T09:34:50.420Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="l&#39;tian">
-<meta name="twitter:description" content="take Jeep to LaSa.">
+<meta name="twitter:description" content="$ Spring注入方式：  1；设置注入(属性注入) ，有一个set xx的方法  2: 构造注入(构造器注入) ，有一个构造器  $ spring自动装配   其中的age , name, car-ref(都是引用) Spring IOC容器自动配置Bean 在 的autowirs属性里指定自动装配的模式例如：1：byType(根据类型自动装配)：不可取，如果多个类型相同的bean,Sprin">
 
 
 
@@ -119,7 +119,7 @@
 
 
 
-  <link rel="canonical" href="http://lvtian123.github.io/2018/04/16/Spring-自动化装配/"/>
+  <link rel="canonical" href="http://lvtian123.github.io/2018/04/16/spring-自动化装配以及注入方式/"/>
 
 
 
@@ -339,7 +339,21 @@
       
 
       
-        
+        <pre><code class="bash">$ Spring注入方式：
+</code></pre>
+<p>1；设置注入(属性注入) ，有一个set xx的方法 <property></property></p>
+<p>2: 构造注入(构造器注入) ，有一个构造器 <constructor></constructor></p>
+<pre><code class="bash">$ spring自动装配
+</code></pre>
+<!--通过 p 命名空间为bean的属性赋值，需要先导入p命名空间 ；相对于传统配置方式更加简洁-->
+<p><bean id="xx" class="xx.xxx.xxx.xx.x" p:age="30" p:name="Queen" p:car-ref="cars"></bean><br>其中的age , name, car-ref(都是引用)</p>
+<p>Spring IOC容器自动配置Bean</p>
+<p>在<bean> 的autowirs属性里指定自动装配的模式<br>例如：<br>1：byType(根据类型自动装配)：不可取，如果多个类型相同的bean,Spring无法判断</bean></p>
+<p>2：byName(根据名称自动配置)：必须将Bean 的名称和属性名设置的完全相同。</p>
+<p>3：constructor(构造器自动配置)：不可取，如果 bean 中存在多个构造器，会很复杂。</p>
+<p>&lt;bean:xml里面的···  当前bean指xml外的容器里的属性&gt;<br>autowirs 属性指定自动装配<br>1：byName 根据bean 名字  和当前 bean 的setter 风格属性名进行配置，if 没有找到则null;<br>2: byType 根据bean 类型  和当前bean的属性自动装配，if IOC容器里有一个以上相同的bean，则抛异常。<br>缺点：必须都是用<br>要么byName要么byTtpe。（一般很少在实际项目中使用）</p>
+<p>spring 配置继承<br>1；（parent操作）<br>2；abstract：抽象的bean不能实例化，只能xml中被其他bean被继承</p>
+
       
     </div>
     
