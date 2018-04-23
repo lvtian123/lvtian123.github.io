@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="##----注解的方式配置bean;   IOC容器就是具有依赖注入功能的容器, IOC容器负责实例化、定位、配置应用程序中的对象及建立这些对象间的依赖。 ##----AOP   基于注解的方式 1,可以通过order安排优先级; 2,使用pointcut来声明切入表达式; 3,其它的通知直接使用方法名来引用当前的切入点（如：@before ，@after等等） ##----了解了spring整合">
+<meta name="description" content="## ----注解的方式配置bean;   IOC容器就是具有依赖注入功能的容器, IOC容器负责实例化、定位、配置应用程序中的对象及建立这些对象间的依赖。 ## ----AOP   基于注解的方式 1,可以通过order安排优先级; 2,使用pointcut来声明切入表达式; 3,其它的通知直接使用方法名来引用当前的切入点（如：@before ，@after等等） ## ----了解了sprin">
 <meta property="og:type" content="article">
 <meta property="og:title" content="简单了解AOP,以及spring整合hibernate">
 <meta property="og:url" content="http://lvtian123.github.io/2018/04/23/简单了解AOP-以及spring整合hibernate/index.html">
 <meta property="og:site_name" content="l&#39;tian">
-<meta property="og:description" content="##----注解的方式配置bean;   IOC容器就是具有依赖注入功能的容器, IOC容器负责实例化、定位、配置应用程序中的对象及建立这些对象间的依赖。 ##----AOP   基于注解的方式 1,可以通过order安排优先级; 2,使用pointcut来声明切入表达式; 3,其它的通知直接使用方法名来引用当前的切入点（如：@before ，@after等等） ##----了解了spring整合">
+<meta property="og:description" content="## ----注解的方式配置bean;   IOC容器就是具有依赖注入功能的容器, IOC容器负责实例化、定位、配置应用程序中的对象及建立这些对象间的依赖。 ## ----AOP   基于注解的方式 1,可以通过order安排优先级; 2,使用pointcut来声明切入表达式; 3,其它的通知直接使用方法名来引用当前的切入点（如：@before ，@after等等） ## ----了解了sprin">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-23T15:01:40.751Z">
+<meta property="og:updated_time" content="2018-04-23T15:07:36.232Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="简单了解AOP,以及spring整合hibernate">
-<meta name="twitter:description" content="##----注解的方式配置bean;   IOC容器就是具有依赖注入功能的容器, IOC容器负责实例化、定位、配置应用程序中的对象及建立这些对象间的依赖。 ##----AOP   基于注解的方式 1,可以通过order安排优先级; 2,使用pointcut来声明切入表达式; 3,其它的通知直接使用方法名来引用当前的切入点（如：@before ，@after等等） ##----了解了spring整合">
+<meta name="twitter:description" content="## ----注解的方式配置bean;   IOC容器就是具有依赖注入功能的容器, IOC容器负责实例化、定位、配置应用程序中的对象及建立这些对象间的依赖。 ## ----AOP   基于注解的方式 1,可以通过order安排优先级; 2,使用pointcut来声明切入表达式; 3,其它的通知直接使用方法名来引用当前的切入点（如：@before ，@after等等） ## ----了解了sprin">
 
 
 
@@ -320,7 +320,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">字数统计:</span>
-           <span class="post-count">362(字)</span> 
+           <span class="post-count">428(字)</span> 
          </span>
 		 
 		  <span id="busuanzi_container_page_pv">
@@ -353,17 +353,16 @@
       
 
       
-        <pre><code class="bash"><span class="comment">##----注解的方式配置bean;</span>
+        <pre><code class="bash"><span class="comment">## ----注解的方式配置bean;</span>
 </code></pre>
 <p> IOC容器就是具有依赖注入功能的容器,<br> IOC容器负责实例化、定位、配置应用程序中的对象及建立这些对象间的依赖。</p>
-<pre><code class="bash"><span class="comment">##----AOP</span>
+<pre><code class="bash"><span class="comment">## ----AOP</span>
 </code></pre>
 <p> 基于注解的方式<br> 1,可以通过order安排优先级;<br> 2,使用pointcut来声明切入表达式;<br> 3,其它的通知直接使用方法名来引用当前的切入点（如：@before ，@after等等）</p>
-<pre><code class="bash"><span class="comment">##----了解了spring整合hibernate：</span>
+<pre><code class="bash"><span class="comment">## ----了解了spring整合hibernate：</span>
 </code></pre>
 <p> 主要是spring的xml文件的配置；</p>
-<p> ###一:配置数据源</p>
-<p> &lt;context:property-placeholder<br>        location=”classpath:db.properties” /&gt;</p>
+<h3 id="一-配置数据源"><a href="#一-配置数据源" class="headerlink" title="一:配置数据源"></a>一:配置数据源</h3><p> &lt;context:property-placeholder<br>        location=”classpath:db.properties” /&gt;</p>
 <pre><code>&lt;bean id=&quot;dataSource&quot;
     class=&quot;com.mchange.v2.c3p0.ComboPooledDataSource&quot;&gt;
     &lt;property name=&quot;user&quot; value=&quot;${jdbc.user}&quot;&gt;&lt;/property&gt;
@@ -375,17 +374,26 @@
 
 
 &lt;/bean&gt;
-</code></pre><p>###二:配置spring的SessionFactory的实例：通过spring提供的LocalSessionFactoryBean配置;</p>
- <bean id="SessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean"><br>        ####<!--配置数据源属性 --><br>        <property name="dataSource" ref="dataSource"></property><br><br>        ####<!--配置hibernate的位置及名称 --><br>        <property name="configLocation" value="classpath:hibernate.cfg.xml"></property><br><br>        ####<!--配置hibernate映射文件的位置及名称 --><br>        <property name="mappingLocations" value="com/lv/spring/hibernate/entities/*.hbm.xml"></property><br><br>    </bean>
+</code></pre><h3 id="二-配置spring的SessionFactory的实例：通过spring提供的LocalSessionFactoryBean配置"><a href="#二-配置spring的SessionFactory的实例：通过spring提供的LocalSessionFactoryBean配置" class="headerlink" title="二:配置spring的SessionFactory的实例：通过spring提供的LocalSessionFactoryBean配置;"></a>二:配置spring的SessionFactory的实例：通过spring提供的LocalSessionFactoryBean配置;</h3><pre><code>&lt;bean id=&quot;SessionFactory&quot;
+    class=&quot;org.springframework.orm.hibernate4.LocalSessionFactoryBean&quot;&gt;
+    #### &lt;!--配置数据源属性 --&gt;
+    &lt;property name=&quot;dataSource&quot; ref=&quot;dataSource&quot;&gt;&lt;/property&gt;
 
+    #### &lt;!--配置hibernate的位置及名称 --&gt;
+    &lt;property name=&quot;configLocation&quot;
+        value=&quot;classpath:hibernate.cfg.xml&quot;&gt;&lt;/property&gt;
 
-<p>###三:配置spring的声明式事务</p>
-<pre><code>####&lt;!-- 配置事务管理器 --&gt;
+    #### &lt;!--配置hibernate映射文件的位置及名称 --&gt;
+    &lt;property name=&quot;mappingLocations&quot;
+        value=&quot;com/lv/spring/hibernate/entities/*.hbm.xml&quot;&gt;&lt;/property&gt;
+
+&lt;/bean&gt;
+</code></pre><h3 id="三-配置spring的声明式事务"><a href="#三-配置spring的声明式事务" class="headerlink" title="三:配置spring的声明式事务"></a>三:配置spring的声明式事务</h3><pre><code>#### &lt;!-- 配置事务管理器 --&gt;
 &lt;bean id=&quot;transactionManager&quot;
     class=&quot;org.springframework.orm.hibernate4.HibernateTransactionManager&quot;&gt;
     &lt;property name=&quot;sessionFactory&quot; ref=&quot;SessionFactory&quot;&gt;&lt;/property&gt;
 &lt;/bean&gt;
-####&lt;!-- 配置事务属性，需要事务管理器 --&gt;
+#### &lt;!-- 配置事务属性，需要事务管理器 --&gt;
 &lt;tx:advice id=&quot;txAdvice&quot;
     transaction-manager=&quot;transactionManager&quot;&gt;
     &lt;tx:attributes&gt;
@@ -393,7 +401,7 @@
         &lt;tx:method name=&quot;*&quot; /&gt;
     &lt;/tx:attributes&gt;
 &lt;/tx:advice&gt;
-####&lt;!-- 配置事务切点，并把事务切点和事务属性关联起来 --&gt;
+#### &lt;!-- 配置事务切点，并把事务切点和事务属性关联起来 --&gt;
 &lt;aop:config&gt;
     &lt;aop:pointcut
         expression=&quot;execution(* com.lv.spring.hibernate.*.*(..))&quot;
@@ -501,8 +509,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -586,6 +603,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一-配置数据源"><span class="nav-number">1.</span> <span class="nav-text">一:配置数据源</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二-配置spring的SessionFactory的实例：通过spring提供的LocalSessionFactoryBean配置"><span class="nav-number">2.</span> <span class="nav-text">二:配置spring的SessionFactory的实例：通过spring提供的LocalSessionFactoryBean配置;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#三-配置spring的声明式事务"><span class="nav-number">3.</span> <span class="nav-text">三:配置spring的声明式事务</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
