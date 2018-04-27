@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Spring Boot Configuratiob Annotation Process or not founf in classPath解决方法：添加pom的spring依赖—&amp;gt;         &amp;lt;dependency&amp;gt;             &amp;lt;groupId&amp;gt; org.springframework.boot &amp;lt;/groupId&amp;gt;">
+<meta name="description" content="Error:SpringBoot Configuratiob Annotation Process or not founf in classPath.解决方法：添加pom的spring依赖—&amp;gt;         &amp;lt;dependency&amp;gt;#             &amp;lt;groupId&amp;gt; org.springframework.boot &amp;lt;/groupId&amp;gt;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="初学SpringBoot注释，controller，一些深坑">
 <meta property="og:url" content="http://lvtian123.github.io/2018/04/27/初学SpringBoot注释，controller，一些深坑/index.html">
 <meta property="og:site_name" content="l&#39;tian">
-<meta property="og:description" content="Spring Boot Configuratiob Annotation Process or not founf in classPath解决方法：添加pom的spring依赖—&amp;gt;         &amp;lt;dependency&amp;gt;             &amp;lt;groupId&amp;gt; org.springframework.boot &amp;lt;/groupId&amp;gt;">
+<meta property="og:description" content="Error:SpringBoot Configuratiob Annotation Process or not founf in classPath.解决方法：添加pom的spring依赖—&amp;gt;         &amp;lt;dependency&amp;gt;#             &amp;lt;groupId&amp;gt; org.springframework.boot &amp;lt;/groupId&amp;gt;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-27T04:40:31.971Z">
+<meta property="og:updated_time" content="2018-04-27T05:09:31.176Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初学SpringBoot注释，controller，一些深坑">
-<meta name="twitter:description" content="Spring Boot Configuratiob Annotation Process or not founf in classPath解决方法：添加pom的spring依赖—&amp;gt;         &amp;lt;dependency&amp;gt;             &amp;lt;groupId&amp;gt; org.springframework.boot &amp;lt;/groupId&amp;gt;">
+<meta name="twitter:description" content="Error:SpringBoot Configuratiob Annotation Process or not founf in classPath.解决方法：添加pom的spring依赖—&amp;gt;         &amp;lt;dependency&amp;gt;#             &amp;lt;groupId&amp;gt; org.springframework.boot &amp;lt;/groupId&amp;gt;">
 
 
 
@@ -353,8 +353,8 @@
       
 
       
-        <h2 id="Spring-Boot-Configuratiob-Annotation-Process-or-not-founf-in-classPath"><a href="#Spring-Boot-Configuratiob-Annotation-Process-or-not-founf-in-classPath" class="headerlink" title="Spring Boot Configuratiob Annotation Process or not founf in classPath"></a>Spring Boot Configuratiob Annotation Process or not founf in classPath</h2><pre><code class="bash">解决方法：添加pom的spring依赖—&gt;
-        &lt;dependency&gt;
+        <h3 id="Error-SpringBoot-Configuratiob-Annotation-Process-or-not-founf-in-classPath"><a href="#Error-SpringBoot-Configuratiob-Annotation-Process-or-not-founf-in-classPath" class="headerlink" title="Error:SpringBoot Configuratiob Annotation Process or not founf in classPath."></a>Error:SpringBoot Configuratiob Annotation Process or not founf in classPath.</h3><pre><code class="bash">解决方法：添加pom的spring依赖—&gt;
+        &lt;dependency&gt;<span class="comment">#</span>
             &lt;groupId&gt; org.springframework.boot &lt;/groupId&gt;
             &lt;artifactId&gt; spring-boot-configuration-processor &lt;/artifactId&gt;
             &lt;optional&gt; <span class="literal">true</span> &lt;/optional&gt;
@@ -364,21 +364,20 @@
 
       2:通过集合的方式被不同的前缀（如：hello、hi都可以访问相同的方法）访问@RequestMapping(value = {<span class="string">"/hello"</span>,<span class="string">"/hi"</span>} ,method = RequestMethod.GET)
 </code></pre>
-<pre><code class="bash"><span class="comment">## Controller的使用</span>
-    @PathVariable 
-    //@RequestMapping(value =<span class="string">"/say/{id}"</span> ,method = RequestMethod.GET)
-    //void say(@PathVariable(<span class="string">"id"</span>) Integer id){
-    // <span class="built_in">return</span> <span class="string">"id:"</span>+id}
+<h3 id="Controller的使用"><a href="#Controller的使用" class="headerlink" title="Controller的使用"></a>Controller的使用</h3><pre><code class="bash">@PathVariable 
+//@RequestMapping(value =<span class="string">"/say/{id}"</span> ,method = RequestMethod.GET)
+//void say(@PathVariable(<span class="string">"id"</span>) Integer id){
+// <span class="built_in">return</span> <span class="string">"id:"</span>+id}
 
-    @RequestParam 获取请求参数的值
+@RequestParam 获取请求参数的值
 
-    //(@RequestParam(value=<span class="string">"id"</span> ,required = <span class="literal">false</span>,defaultValue = <span class="string">"0"</span>)
+//(@RequestParam(value=<span class="string">"id"</span> ,required = <span class="literal">false</span>,defaultValue = <span class="string">"0"</span>)
 
 
-    @GetMapping 组合注解
+@GetMapping 组合注解
 
-    //@RequestMapping(value =<span class="string">"/say"</span> ,method = RequestMethod.GET)
-    //@GetMapping(value =<span class="string">"/say"</span>)
+//@RequestMapping(value =<span class="string">"/say"</span> ,method = RequestMethod.GET)
+//@GetMapping(value =<span class="string">"/say"</span>)
 </code></pre>
 
       
@@ -578,7 +577,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-Boot-Configuratiob-Annotation-Process-or-not-founf-in-classPath"><span class="nav-number">1.</span> <span class="nav-text">Spring Boot Configuratiob Annotation Process or not founf in classPath</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Error-SpringBoot-Configuratiob-Annotation-Process-or-not-founf-in-classPath"><span class="nav-number">1.</span> <span class="nav-text">Error:SpringBoot Configuratiob Annotation Process or not founf in classPath.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Controller的使用"><span class="nav-number">2.</span> <span class="nav-text">Controller的使用</span></a></li></ol></div>
             
 
           </div>
