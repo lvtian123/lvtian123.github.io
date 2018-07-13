@@ -40,7 +40,7 @@
 
   
   
-  <link href="../lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="../../../../lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -48,21 +48,21 @@
 
 
 
-<link href="../lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="../../../../lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="../css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon-next.png?v=5.1.4">
+<link href="../../../../css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon-next.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32-next.png?v=5.1.4">
 
 
-  <link rel="mask-icon" href="../images/logo.svg?v=5.1.4" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="../../../../images/logo.svg?v=5.1.4" color="#222">
 
 
 
@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="take Jeep to LaSa.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://lvtian123.github.io/categories/index.html">
+<meta name="description" content="一:封装性1,所有类当中定义的属性都必须使用private声明，如果被外部类引用，定义相应的setter,getter方法；2，封装性就是类内部定义的属性对外部不可见;二:构造方法的基本语法及调用时机1,构造方法：类名与方法名相同，无返回值声明;2,构造方式实在类对象被实例化(new)之后默认被调用的;3,一个类中至少保留一个构造方法;4,构造方式是在对象被实例化之后：只能调用一次;  普通方法是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="封装型,构造函数,以及匿名对象的使用">
+<meta property="og:url" content="http://lvtian123.github.io/2018/07/13/封装型-构造函数-以及匿名对象的使用/index.html">
 <meta property="og:site_name" content="l&#39;tian">
-<meta property="og:description" content="take Jeep to LaSa.">
+<meta property="og:description" content="一:封装性1,所有类当中定义的属性都必须使用private声明，如果被外部类引用，定义相应的setter,getter方法；2，封装性就是类内部定义的属性对外部不可见;二:构造方法的基本语法及调用时机1,构造方法：类名与方法名相同，无返回值声明;2,构造方式实在类对象被实例化(new)之后默认被调用的;3,一个类中至少保留一个构造方法;4,构造方式是在对象被实例化之后：只能调用一次;  普通方法是">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-14T04:06:03.160Z">
+<meta property="og:updated_time" content="2018-07-13T02:42:17.330Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
-<meta name="twitter:description" content="take Jeep to LaSa.">
+<meta name="twitter:title" content="封装型,构造函数,以及匿名对象的使用">
+<meta name="twitter:description" content="一:封装性1,所有类当中定义的属性都必须使用private声明，如果被外部类引用，定义相应的setter,getter方法；2，封装性就是类内部定义的属性对外部不可见;二:构造方法的基本语法及调用时机1,构造方法：类名与方法名相同，无返回值声明;2,构造方式实在类对象被实例化(new)之后默认被调用的;3,一个类中至少保留一个构造方法;4,构造方式是在对象被实例化之后：只能调用一次;  普通方法是">
 
 
 
@@ -119,14 +119,14 @@
 
 
 
-  <link rel="canonical" href="http://lvtian123.github.io/categories/"/>
+  <link rel="canonical" href="http://lvtian123.github.io/2018/07/13/封装型-构造函数-以及匿名对象的使用/"/>
 
 
 
 
 <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
 
-  <title>categories | l'tian</title>
+  <title>封装型,构造函数,以及匿名对象的使用 | l'tian</title>
   
 
 
@@ -295,40 +295,162 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lvtian123.github.io">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lv'tian">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="../../../../images/me.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="l'tian">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">categories</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="category-all-page">
-            <div class="category-all-title">
-                暂无分类
-            </div>
-            <div class="category-all">
+          <h1 class="post-title" itemprop="name headline">封装型,构造函数,以及匿名对象的使用</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
               
-            </div>
-          </div>
-        
-      </div>
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-13T10:37:56+08:00">
+                2018-07-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+		  
+		  <span class="post-time">
+	   &nbsp; | &nbsp;
+           <span class="post-meta-item-icon">
+             <i class="fa fa-calendar-o"></i>
+           </span>
+           <span class="post-meta-item-text">字数统计:</span>
+           <span class="post-count">526(字)</span> 
+         </span>
+		 
+		  <span id="busuanzi_container_page_pv">
+           &nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
+          </span>
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="一-封装性"><a href="#一-封装性" class="headerlink" title="一:封装性"></a>一:封装性</h2><h3 id="1-所有类当中定义的属性都必须使用private声明，如果被外部类引用，定义相应的setter-getter方法；"><a href="#1-所有类当中定义的属性都必须使用private声明，如果被外部类引用，定义相应的setter-getter方法；" class="headerlink" title="1,所有类当中定义的属性都必须使用private声明，如果被外部类引用，定义相应的setter,getter方法；"></a>1,所有类当中定义的属性都必须使用private声明，如果被外部类引用，定义相应的setter,getter方法；</h3><h3 id="2，封装性就是类内部定义的属性对外部不可见"><a href="#2，封装性就是类内部定义的属性对外部不可见" class="headerlink" title="2，封装性就是类内部定义的属性对外部不可见;"></a>2，封装性就是类内部定义的属性对外部不可见;</h3><h2 id="二-构造方法的基本语法及调用时机"><a href="#二-构造方法的基本语法及调用时机" class="headerlink" title="二:构造方法的基本语法及调用时机"></a>二:构造方法的基本语法及调用时机</h2><h3 id="1-构造方法：类名与方法名相同，无返回值声明"><a href="#1-构造方法：类名与方法名相同，无返回值声明" class="headerlink" title="1,构造方法：类名与方法名相同，无返回值声明;"></a>1,构造方法：类名与方法名相同，无返回值声明;</h3><h3 id="2-构造方式实在类对象被实例化-new-之后默认被调用的"><a href="#2-构造方式实在类对象被实例化-new-之后默认被调用的" class="headerlink" title="2,构造方式实在类对象被实例化(new)之后默认被调用的;"></a>2,构造方式实在类对象被实例化(new)之后默认被调用的;</h3><h3 id="3-一个类中至少保留一个构造方法"><a href="#3-一个类中至少保留一个构造方法" class="headerlink" title="3,一个类中至少保留一个构造方法;"></a>3,一个类中至少保留一个构造方法;</h3><h3 id="4-构造方式是在对象被实例化之后：只能调用一次"><a href="#4-构造方式是在对象被实例化之后：只能调用一次" class="headerlink" title="4,构造方式是在对象被实例化之后：只能调用一次;"></a>4,构造方式是在对象被实例化之后：只能调用一次;</h3><p>  普通方法是在对象被实例化之后：多次调用;（说白了就是构造方法的重载）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">### 5,构造方法的核心作用:在类对象实例化的时候，设置属性的初始化内容;</span></span><br><span class="line"></span><br><span class="line">    User user =new User();//类对象实例化</span><br><span class="line">	public User(String name;String age)&#123;</span><br><span class="line">	this.name=name;</span><br><span class="line">	this.age=age;</span><br><span class="line">	&#125;//设置属性的初始化内容</span><br><span class="line">public class Structure &#123;</span><br><span class="line"></span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">        Boook bk= null;</span><br><span class="line">        bk = new Boook();//构造方法只有在声明并实例化之后，才会被引用；22</span><br><span class="line">        System.out.println(bk);//成为垃圾了(内存)</span><br><span class="line">        bk=new Boook();//bk改变成为新的引用，之前的22成为垃圾(内存)</span><br><span class="line">        System.out.println(bk);</span><br><span class="line">		bk.info();//多次调用</span><br><span class="line">		bk.info();</span><br><span class="line">		bk.info();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">class Boook&#123;</span><br><span class="line">    private String  id;</span><br><span class="line">    private double price;</span><br><span class="line">	public void <span class="function"><span class="title">info</span></span>()&#123;</span><br><span class="line">	System.out.println(<span class="string">"********"</span>)&#125;</span><br><span class="line">	</span><br><span class="line">    public <span class="function"><span class="title">Boook</span></span>()&#123;</span><br><span class="line">        System.out.println(<span class="string">".........."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    public String <span class="function"><span class="title">getId</span></span>() &#123;</span><br><span class="line">        <span class="built_in">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line">   public void setId(String id) &#123;</span><br><span class="line">        this.id = id;</span><br><span class="line">    &#125;</span><br><span class="line">   public double <span class="function"><span class="title">getPrice</span></span>() &#123;</span><br><span class="line">        <span class="built_in">return</span> price;</span><br><span class="line">    &#125;</span><br><span class="line">   public void setPrice(double price) &#123;</span><br><span class="line">        this.price = price;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="6-匿名对象在重载时，要求至改变参数的类型和个数"><a href="#6-匿名对象在重载时，要求至改变参数的类型和个数" class="headerlink" title="6,匿名对象在重载时，要求至改变参数的类型和个数;"></a>6,匿名对象在重载时，要求至改变参数的类型和个数;</h3><h2 id="三-匿名对象的基本使用"><a href="#三-匿名对象的基本使用" class="headerlink" title="三:匿名对象的基本使用"></a>三:匿名对象的基本使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1，匿名对象由于没有其它对象对其进行引用，所以只能使用一次，然后成为垃圾(内存)；</span><br><span class="line"> public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">        /*Book bk = new Book(<span class="string">"hello"</span>,1.0);</span><br><span class="line">        bk.info();*/</span><br><span class="line">        new Book(<span class="string">"hello"</span>,1.0).info();//匿名对象的使用,且无法被引用。</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+	  <footer class="post-footer">
+    
+        <div class="copyright" style="clear:both;">
+           <p><span>本文标题:</span><a href="">封装型,构造函数,以及匿名对象的使用</a></p>
+           <p><span>文章作者:</span><a href="/" title="访问 Lv'tian 的个人博客">Lv'tian</a></p>
+           <p><span>原始链接:</span><a href="" title="封装型,构造函数,以及匿名对象的使用">http://lvtian123.github.io/2018/07/13/封装型-构造函数-以及匿名对象的使用/</a></p>
+           <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" title="Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)">Attribution-NonCommercial 4.0</a></p>
+           <p><span>若转载，请留以上信息，谢谢合作</span></p>
+        </div>
+      
+</footer>
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="../../12/递归，类和对象，堆内存和桟内存/" rel="next" title="递归，类和对象，堆内存和桟内存">
+                <i class="fa fa-chevron-left"></i> 递归，类和对象，堆内存和桟内存
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -361,13 +483,22 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="../images/me.jpg"
+                src="../../../../images/me.jpg"
                 alt="Lv'tian" />
             
               <p class="site-author-name" itemprop="name">Lv'tian</p>
@@ -379,7 +510,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="../archives">
+                <a href="../../../../archives">
               
                   <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">日志</span>
@@ -446,6 +577,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-封装性"><span class="nav-number">1.</span> <span class="nav-text">一:封装性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-所有类当中定义的属性都必须使用private声明，如果被外部类引用，定义相应的setter-getter方法；"><span class="nav-number">1.1.</span> <span class="nav-text">1,所有类当中定义的属性都必须使用private声明，如果被外部类引用，定义相应的setter,getter方法；</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2，封装性就是类内部定义的属性对外部不可见"><span class="nav-number">1.2.</span> <span class="nav-text">2，封装性就是类内部定义的属性对外部不可见;</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-构造方法的基本语法及调用时机"><span class="nav-number">2.</span> <span class="nav-text">二:构造方法的基本语法及调用时机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-构造方法：类名与方法名相同，无返回值声明"><span class="nav-number">2.1.</span> <span class="nav-text">1,构造方法：类名与方法名相同，无返回值声明;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-构造方式实在类对象被实例化-new-之后默认被调用的"><span class="nav-number">2.2.</span> <span class="nav-text">2,构造方式实在类对象被实例化(new)之后默认被调用的;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-一个类中至少保留一个构造方法"><span class="nav-number">2.3.</span> <span class="nav-text">3,一个类中至少保留一个构造方法;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-构造方式是在对象被实例化之后：只能调用一次"><span class="nav-number">2.4.</span> <span class="nav-text">4,构造方式是在对象被实例化之后：只能调用一次;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-匿名对象在重载时，要求至改变参数的类型和个数"><span class="nav-number">2.5.</span> <span class="nav-text">6,匿名对象在重载时，要求至改变参数的类型和个数;</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三-匿名对象的基本使用"><span class="nav-number">3.</span> <span class="nav-text">三:匿名对象的基本使用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -535,64 +682,64 @@
 
   
   
-    <script type="text/javascript" src="../lib/jquery/index.js?v=2.1.3"></script>
+    <script type="text/javascript" src="../../../../lib/jquery/index.js?v=2.1.3"></script>
   
 
   
   
-    <script type="text/javascript" src="../lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+    <script type="text/javascript" src="../../../../lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
   
 
   
   
-    <script type="text/javascript" src="../lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+    <script type="text/javascript" src="../../../../lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
   
 
   
   
-    <script type="text/javascript" src="../lib/velocity/velocity.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="../../../../lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="../lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="../../../../lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="../lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script type="text/javascript" src="../../../../lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   
-
-
-  
-
-
-  <script type="text/javascript" src="../js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="../js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="../js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="../js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
-  
-  <script type="text/javascript" src="../js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="../js/src/post-details.js?v=5.1.4"></script>
-
 
 
   
 
 
-  <script type="text/javascript" src="../js/src/bootstrap.js?v=5.1.4"></script>
+  <script type="text/javascript" src="../../../../js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="../../../../js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="../../../../js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="../../../../js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="../../../../js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="../../../../js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="../../../../js/src/bootstrap.js?v=5.1.4"></script>
 
 
 
