@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="线程的命名与取得1234  对线程名称操作,可以使用Thread类的如下方法：   构造方法： public Thread(Runnable target, String name);设置名字： public final void setName(String);取得名字： public final String getName(); 每一个JVM进程启动的时候至少启动几个线程？12main线程：">
+<meta name="description" content="线程的命名与取得1234   对线程名称操作,可以使用Thread类的如下方法：   构造方法： public Thread(Runnable target, String name);设置名字： public final void setName(String);取得名字： public final String getName(); 每一个JVM进程启动的时候至少启动几个线程？12main线程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线程的命名与取得,休眠以及优先级">
 <meta property="og:url" content="http://lvtian123.github.io/2018/07/17/线程的命名与取得-休眠以及优先级/index.html">
 <meta property="og:site_name" content="l&#39;tian">
-<meta property="og:description" content="线程的命名与取得1234  对线程名称操作,可以使用Thread类的如下方法：   构造方法： public Thread(Runnable target, String name);设置名字： public final void setName(String);取得名字： public final String getName(); 每一个JVM进程启动的时候至少启动几个线程？12main线程：">
+<meta property="og:description" content="线程的命名与取得1234   对线程名称操作,可以使用Thread类的如下方法：   构造方法： public Thread(Runnable target, String name);设置名字： public final void setName(String);取得名字： public final String getName(); 每一个JVM进程启动的时候至少启动几个线程？12main线程">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-17T07:37:03.245Z">
+<meta property="og:updated_time" content="2018-07-17T07:49:47.587Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线程的命名与取得,休眠以及优先级">
-<meta name="twitter:description" content="线程的命名与取得1234  对线程名称操作,可以使用Thread类的如下方法：   构造方法： public Thread(Runnable target, String name);设置名字： public final void setName(String);取得名字： public final String getName(); 每一个JVM进程启动的时候至少启动几个线程？12main线程：">
+<meta name="twitter:description" content="线程的命名与取得1234   对线程名称操作,可以使用Thread类的如下方法：   构造方法： public Thread(Runnable target, String name);设置名字： public final void setName(String);取得名字： public final String getName(); 每一个JVM进程启动的时候至少启动几个线程？12main线程">
 
 
 
@@ -387,15 +387,15 @@
       
 
       
-        <h2 id="线程的命名与取得"><a href="#线程的命名与取得" class="headerlink" title="线程的命名与取得"></a>线程的命名与取得</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">  对线程名称操作,可以使用Thread类的如下方法：</span><br><span class="line">   构造方法： public Thread(Runnable target, String name);</span><br><span class="line">设置名字： public final void setName(String);</span><br><span class="line">取得名字： public final String getName();</span><br></pre></td></tr></table></figure>
+        <h2 id="线程的命名与取得"><a href="#线程的命名与取得" class="headerlink" title="线程的命名与取得"></a>线程的命名与取得</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">   对线程名称操作,可以使用Thread类的如下方法：</span><br><span class="line">   构造方法： public Thread(Runnable target, String name);</span><br><span class="line">设置名字： public final void setName(String);</span><br><span class="line">取得名字： public final String getName();</span><br></pre></td></tr></table></figure>
 <h2 id="每一个JVM进程启动的时候至少启动几个线程？"><a href="#每一个JVM进程启动的时候至少启动几个线程？" class="headerlink" title="每一个JVM进程启动的时候至少启动几个线程？"></a>每一个JVM进程启动的时候至少启动几个线程？</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">main线程：程序的主要执行</span><br><span class="line">gc线程：负责垃圾回收</span><br></pre></td></tr></table></figure>
 <h2 id="线程的休眠"><a href="#线程的休眠" class="headerlink" title="线程的休眠"></a>线程的休眠</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">休眠的方法:public static native void sleep(long millis) throws InterruptedException;</span><br></pre></td></tr></table></figure>
 <h2 id="线程的优先级"><a href="#线程的优先级" class="headerlink" title="线程的优先级"></a>线程的优先级</h2><pre><code class="bash">设置优先级： public final void setPriority(int newPriority)
 取得优先级： public final int getPriority()
 发现设置和取得优先级都使用了int数据类型,对此内容有三种取值：
- 最高优先级： public final static int MAX_PRIORITY;
- 中等优先级：    public final static int NORM_PRIORITY; 
- 最低优先级： public final static int MIN_PRIORITY;
+最高优先级： public final static int MAX_PRIORITY;
+中等优先级：    public final static int NORM_PRIORITY; 
+最低优先级： public final static int MIN_PRIORITY;
 </code></pre>
 <h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p> 一:Thread.currentThread()可以取出当前线程对象;<br> 二:Thread.sleep()主要是休眠,有优先顺序;</p>
 
