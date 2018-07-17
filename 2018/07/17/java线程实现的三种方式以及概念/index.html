@@ -40,7 +40,7 @@
 
   
   
-  <link href="../../../lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+  <link href="../../../../lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
 
 
 
@@ -48,21 +48,21 @@
 
 
 
-<link href="../../../lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+<link href="../../../../lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="../../../css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon-next.png?v=5.1.4">
+<link href="../../../../css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="../../../images/favicon-32x32-next.png?v=5.1.4">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon-next.png?v=5.1.4">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="../../../images/favicon-16x16-next.png?v=5.1.4">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32-next.png?v=5.1.4">
 
 
-  <link rel="mask-icon" href="../../../images/logo.svg?v=5.1.4" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="../../../../images/logo.svg?v=5.1.4" color="#222">
 
 
 
@@ -79,16 +79,17 @@
 
 
 
-<meta name="description" content="take Jeep to LaSa.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="l&#39;tian">
-<meta property="og:url" content="http://lvtian123.github.io/archives/page/3/index.html">
+<meta name="description" content="java线程是通过java.lang.Thread类来实现的。VM启动时会有一个由主方法(public static void main(){})所定义的线程;可以通过Thread的实例来创建新的线程;每个线程都是通过某个特定的Thread对象所对应的run()方法来完成其操作,方法run()成为线程体;通过Thread类的start()方法来启动一个线程;java线程实现的三种方式继承Threa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java线程实现的三种方式以及概念">
+<meta property="og:url" content="http://lvtian123.github.io/2018/07/17/java线程实现的三种方式以及概念/index.html">
 <meta property="og:site_name" content="l&#39;tian">
-<meta property="og:description" content="take Jeep to LaSa.">
+<meta property="og:description" content="java线程是通过java.lang.Thread类来实现的。VM启动时会有一个由主方法(public static void main(){})所定义的线程;可以通过Thread的实例来创建新的线程;每个线程都是通过某个特定的Thread对象所对应的run()方法来完成其操作,方法run()成为线程体;通过Thread类的start()方法来启动一个线程;java线程实现的三种方式继承Threa">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-07-17T03:29:33.098Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="l&#39;tian">
-<meta name="twitter:description" content="take Jeep to LaSa.">
+<meta name="twitter:title" content="java线程实现的三种方式以及概念">
+<meta name="twitter:description" content="java线程是通过java.lang.Thread类来实现的。VM启动时会有一个由主方法(public static void main(){})所定义的线程;可以通过Thread的实例来创建新的线程;每个线程都是通过某个特定的Thread对象所对应的run()方法来完成其操作,方法run()成为线程体;通过Thread类的start()方法来启动一个线程;java线程实现的三种方式继承Threa">
 
 
 
@@ -118,14 +119,14 @@
 
 
 
-  <link rel="canonical" href="http://lvtian123.github.io/archives/page/3/"/>
+  <link rel="canonical" href="http://lvtian123.github.io/2018/07/17/java线程实现的三种方式以及概念/"/>
 
 
 
 
 <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
 
-  <title>归档 | l'tian</title>
+  <title>java线程实现的三种方式以及概念 | l'tian</title>
   
 
 
@@ -144,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -292,226 +293,221 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lvtian123.github.io">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lv'tian">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="../../../../images/me.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="l'tian">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">java线程实现的三种方式以及概念</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-17T11:27:40+08:00">
+                2018-07-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 21 篇日志。 继续努力。
-      </span>
+		  
+		  <span class="post-time">
+	   &nbsp; | &nbsp;
+           <span class="post-meta-item-icon">
+             <i class="fa fa-calendar-o"></i>
+           </span>
+           <span class="post-meta-item-text">字数统计:</span>
+           <span class="post-count">550(字)</span> 
+         </span>
+		 
+		  <span id="busuanzi_container_page_pv">
+           &nbsp; | &nbsp; 热度&nbsp; <span id="busuanzi_value_page_pv"></span>°C
+          </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="../../../2018/04/23/简单了解AOP-以及spring整合hibernate/" itemprop="url">
-              
-                <span itemprop="name">简单了解AOP,以及spring整合hibernate</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-23T22:56:02+08:00"
-              content="2018-04-23" >
-          04-23
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="../../../2018/04/16/配置bean作用域，生命周期，以及Spring通过工厂方法配置bean/" itemprop="url">
-              
-                <span itemprop="name">配置bean作用域，生命周期，以及Spring通过工厂方法配置bean</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-16T20:43:59+08:00"
-              content="2018-04-16" >
-          04-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
+      
+        <h2 id="java线程是通过java-lang-Thread类来实现的。"><a href="#java线程是通过java-lang-Thread类来实现的。" class="headerlink" title="java线程是通过java.lang.Thread类来实现的。"></a>java线程是通过java.lang.Thread类来实现的。</h2><h2 id="VM启动时会有一个由主方法-public-static-void-main-所定义的线程"><a href="#VM启动时会有一个由主方法-public-static-void-main-所定义的线程" class="headerlink" title="VM启动时会有一个由主方法(public static void main(){})所定义的线程;"></a>VM启动时会有一个由主方法(public static void main(){})所定义的线程;</h2><h2 id="可以通过Thread的实例来创建新的线程"><a href="#可以通过Thread的实例来创建新的线程" class="headerlink" title="可以通过Thread的实例来创建新的线程;"></a>可以通过Thread的实例来创建新的线程;</h2><h2 id="每个线程都是通过某个特定的Thread对象所对应的run-方法来完成其操作-方法run-成为线程体"><a href="#每个线程都是通过某个特定的Thread对象所对应的run-方法来完成其操作-方法run-成为线程体" class="headerlink" title="每个线程都是通过某个特定的Thread对象所对应的run()方法来完成其操作,方法run()成为线程体;"></a>每个线程都是通过某个特定的Thread对象所对应的run()方法来完成其操作,方法run()成为线程体;</h2><h2 id="通过Thread类的start-方法来启动一个线程"><a href="#通过Thread类的start-方法来启动一个线程" class="headerlink" title="通过Thread类的start()方法来启动一个线程;"></a>通过Thread类的start()方法来启动一个线程;</h2><h2 id="java线程实现的三种方式"><a href="#java线程实现的三种方式" class="headerlink" title="java线程实现的三种方式"></a>java线程实现的三种方式</h2><h3 id="继承Thread类"><a href="#继承Thread类" class="headerlink" title="继承Thread类"></a>继承Thread类</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">public class Runnable &#123;</span><br><span class="line">    public static void main(String[] args) &#123;</span><br><span class="line">            Run r1=new Run(<span class="string">"lll"</span>);</span><br><span class="line">            Run r2=new Run(<span class="string">"mmm"</span>);</span><br><span class="line">            Run r3=new Run(<span class="string">"ppp"</span>);</span><br><span class="line">              r1.start();</span><br><span class="line">              r2.start();</span><br><span class="line">              r3.start();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">class  Run extends Thread&#123;</span><br><span class="line">    private String name;</span><br><span class="line">    public Run(String name)&#123;</span><br><span class="line">        this.name=name;</span><br><span class="line">    &#125;</span><br><span class="line">   @Override</span><br><span class="line">    public void <span class="function"><span class="title">run</span></span>() &#123;</span><br><span class="line">        <span class="keyword">for</span>(int x=0;x&lt;100;x++)&#123;</span><br><span class="line">            System.out.println(<span class="string">"x:"</span>+x+<span class="string">"name"</span>+this.name);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="发现："><a href="#发现：" class="headerlink" title="发现："></a>发现：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1,在执行此代码的时候，如果没有变化是因为CUP运行快;</span><br><span class="line">2,Thread源码里面有个IllegalThreadStateException异常，属于选择性处理异常，</span><br><span class="line">  当线程重复启动就会报这个错;</span><br><span class="line">3,其中的start0()方法结构类似于java中的抽象方法,使用native声明，会使用到JNI技术:</span><br><span class="line">  使用java调用本身操作系统提供的函数;</span><br><span class="line">  在不同的操作系统中JVM提供了实现start0()方式;</span><br><span class="line">4,通过Thread类的start()方法不仅仅要启动多线程的执行代码,而且根据不同的操作系统完成资源分配;</span><br><span class="line">5,多进程会抢占资源，所以不可能一个执行完后，执行另一个;</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">public synchronized void <span class="function"><span class="title">start</span></span>() {
 
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="../../../2018/04/16/spring-自动装配以及注入方式/" itemprop="url">
-              
-                <span itemprop="name">spring-自动装配以及注入方式</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-16T18:10:04+08:00"
-              content="2018-04-16" >
-          04-16
-        </time>
-      </div>
-
-    </header>
-  </article>
+       <span class="keyword">if</span> (threadStatus != 0)
+           throw new IllegalThreadStateException();
 
 
+       group.add(this);
+
+       boolean started = <span class="literal">false</span>;
+       try {
+           start0();
+           started = <span class="literal">true</span>;
+       } finally {
+           try {
+               <span class="keyword">if</span> (!started) {
+                   group.threadStartFailed(this);
+               }
+           } catch (Throwable ignore) {
+
+           }
+       }
+   }
+
+   private native void start0();
+</code></pre>
+<h3 id="通过实现Runnable接口来实现多线程"><a href="#通过实现Runnable接口来实现多线程" class="headerlink" title="通过实现Runnable接口来实现多线程"></a>通过实现Runnable接口来实现多线程</h3><pre><code class="bash">实现Runable接口并没有start()方法,但是在Thread类中定义了public Thread(Runnable target)方法,
+  接收的是Runnable接口对象
+
+public class Runnable {
+    public static void main(String[] args) {
+            Run r1=new Run(<span class="string">"lll"</span>);
+            Run r2=new Run(<span class="string">"mmm"</span>);
+            Run r3=new Run(<span class="string">"ppp"</span>);
+                new Thread(r1).start();//匿名对象
+                new Thread(r2).start();
+                new Thread(r3).start();
+       }
+    }
+
+class  Run implements java.lang.Runnable {
+    private String name;
+    public Run(String name){
+        this.name=name;
+    }
+   @Override
+    public void <span class="function"><span class="title">run</span></span>() {
+        <span class="keyword">for</span>(int x=0;x&lt;100;x++){
+            System.out.println(<span class="string">"x:"</span>+x+<span class="string">"name"</span>+this.name);
+        }
+    }
+}    
+</code></pre>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="../../../2018/04/14/stupid-pig/" itemprop="url">
-              
-                <span itemprop="name">stupid-pig</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-14T11:02:18+08:00"
-              content="2018-04-14" >
-          04-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="../../../2018/04/11/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-04-11T21:40:17+08:00"
-              content="2018-04-11" >
-          04-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+	  <footer class="post-footer">
+    
+        <div class="copyright" style="clear:both;">
+           <p><span>本文标题:</span><a href="">java线程实现的三种方式以及概念</a></p>
+           <p><span>文章作者:</span><a href="/" title="访问 Lv'tian 的个人博客">Lv'tian</a></p>
+           <p><span>原始链接:</span><a href="" title="java线程实现的三种方式以及概念">http://lvtian123.github.io/2018/07/17/java线程实现的三种方式以及概念/</a></p>
+           <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" title="Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)">Attribution-NonCommercial 4.0</a></p>
+           <p><span>若转载，请留以上信息，谢谢合作</span></p>
+        </div>
+      
+</footer>
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="../../16/引用传递-数据表与简单java类的映射/" rel="next" title="引用传递,数据表与简单java类的映射">
+                <i class="fa fa-chevron-left"></i> 引用传递,数据表与简单java类的映射
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="../两种多线程实现方式的区别-Thread和Runnable/" rel="prev" title="两种多线程实现方式的区别(Thread和Runnable)">
+                两种多线程实现方式的区别(Thread和Runnable) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="../2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="../../">1</a><a class="page-number" href="../2/">2</a><span class="page-number current">3</span>
-  </nav>
+  </article>
 
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -519,6 +515,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -539,13 +539,22 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
               <img class="site-author-image" itemprop="image"
-                src="../../../images/me.jpg"
+                src="../../../../images/me.jpg"
                 alt="Lv'tian" />
             
               <p class="site-author-name" itemprop="name">Lv'tian</p>
@@ -557,7 +566,7 @@
             
               <div class="site-state-item site-state-posts">
               
-                <a href="../../../archives">
+                <a href="../../../../archives">
               
                   <span class="site-state-item-count">21</span>
                   <span class="site-state-item-name">日志</span>
@@ -624,6 +633,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#java线程是通过java-lang-Thread类来实现的。"><span class="nav-number">1.</span> <span class="nav-text">java线程是通过java.lang.Thread类来实现的。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VM启动时会有一个由主方法-public-static-void-main-所定义的线程"><span class="nav-number">2.</span> <span class="nav-text">VM启动时会有一个由主方法(public static void main(){})所定义的线程;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可以通过Thread的实例来创建新的线程"><span class="nav-number">3.</span> <span class="nav-text">可以通过Thread的实例来创建新的线程;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#每个线程都是通过某个特定的Thread对象所对应的run-方法来完成其操作-方法run-成为线程体"><span class="nav-number">4.</span> <span class="nav-text">每个线程都是通过某个特定的Thread对象所对应的run()方法来完成其操作,方法run()成为线程体;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通过Thread类的start-方法来启动一个线程"><span class="nav-number">5.</span> <span class="nav-text">通过Thread类的start()方法来启动一个线程;</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#java线程实现的三种方式"><span class="nav-number">6.</span> <span class="nav-text">java线程实现的三种方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#继承Thread类"><span class="nav-number">6.1.</span> <span class="nav-text">继承Thread类</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发现："><span class="nav-number">7.</span> <span class="nav-text">发现：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#通过实现Runnable接口来实现多线程"><span class="nav-number">7.1.</span> <span class="nav-text">通过实现Runnable接口来实现多线程</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -713,60 +738,64 @@
 
   
   
-    <script type="text/javascript" src="../../../lib/jquery/index.js?v=2.1.3"></script>
+    <script type="text/javascript" src="../../../../lib/jquery/index.js?v=2.1.3"></script>
   
 
   
   
-    <script type="text/javascript" src="../../../lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+    <script type="text/javascript" src="../../../../lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
   
 
   
   
-    <script type="text/javascript" src="../../../lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+    <script type="text/javascript" src="../../../../lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
   
 
   
   
-    <script type="text/javascript" src="../../../lib/velocity/velocity.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="../../../../lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="../../../lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+    <script type="text/javascript" src="../../../../lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
   
   
-    <script type="text/javascript" src="../../../lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <script type="text/javascript" src="../../../../lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   
 
 
   
 
 
-  <script type="text/javascript" src="../../../js/src/utils.js?v=5.1.4"></script>
+  <script type="text/javascript" src="../../../../js/src/utils.js?v=5.1.4"></script>
 
-  <script type="text/javascript" src="../../../js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="../../../js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="../../../js/src/schemes/pisces.js?v=5.1.4"></script>
+  <script type="text/javascript" src="../../../../js/src/motion.js?v=5.1.4"></script>
 
 
 
   
+  
+
+
+  <script type="text/javascript" src="../../../../js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="../../../../js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="../../../../js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="../../../../js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
 
-  <script type="text/javascript" src="../../../js/src/bootstrap.js?v=5.1.4"></script>
+  <script type="text/javascript" src="../../../../js/src/bootstrap.js?v=5.1.4"></script>
 
 
 
