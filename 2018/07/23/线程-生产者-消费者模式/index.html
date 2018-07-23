@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Yes,i’m during a Phase transformation,Before two days, i break up with my girlfriends who get along with me about three years,Here i will review some experience about three years,it’s realized a concl">
+<meta name="description" content="生产者和消费者问题引入1：生产者和消费者问题的产生; 2：Object类对多线程的支持;  代码实现public class Relationship {     public static void main(String[] args) {           Info info=new Info();           new Thread(new Customer(info)).star">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Our love is too helpless">
-<meta property="og:url" content="http://lvtian123.github.io/2018/06/13/Our-love-is-too-helpless/index.html">
+<meta property="og:title" content="线程--生产者,消费者模式">
+<meta property="og:url" content="http://lvtian123.github.io/2018/07/23/线程-生产者-消费者模式/index.html">
 <meta property="og:site_name" content="l&#39;tian">
-<meta property="og:description" content="Yes,i’m during a Phase transformation,Before two days, i break up with my girlfriends who get along with me about three years,Here i will review some experience about three years,it’s realized a concl">
+<meta property="og:description" content="生产者和消费者问题引入1：生产者和消费者问题的产生; 2：Object类对多线程的支持;  代码实现public class Relationship {     public static void main(String[] args) {           Info info=new Info();           new Thread(new Customer(info)).star">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-13T03:37:23.542Z">
+<meta property="og:updated_time" content="2018-07-23T11:32:50.727Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Our love is too helpless">
-<meta name="twitter:description" content="Yes,i’m during a Phase transformation,Before two days, i break up with my girlfriends who get along with me about three years,Here i will review some experience about three years,it’s realized a concl">
+<meta name="twitter:title" content="线程--生产者,消费者模式">
+<meta name="twitter:description" content="生产者和消费者问题引入1：生产者和消费者问题的产生; 2：Object类对多线程的支持;  代码实现public class Relationship {     public static void main(String[] args) {           Info info=new Info();           new Thread(new Customer(info)).star">
 
 
 
@@ -119,14 +119,14 @@
 
 
 
-  <link rel="canonical" href="http://lvtian123.github.io/2018/06/13/Our-love-is-too-helpless/"/>
+  <link rel="canonical" href="http://lvtian123.github.io/2018/07/23/线程-生产者-消费者模式/"/>
 
 
 
 
 <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
 
-  <title>Our love is too helpless | l'tian</title>
+  <title>线程--生产者,消费者模式 | l'tian</title>
   
 
 
@@ -324,7 +324,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Our love is too helpless</h1>
+          <h1 class="post-title" itemprop="name headline">线程--生产者,消费者模式</h1>
         
 
         <div class="post-meta">
@@ -336,8 +336,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-13T11:31:57+08:00">
-                2018-06-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-23T19:30:34+08:00">
+                2018-07-23
               </time>
             
 
@@ -354,7 +354,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">字数统计:</span>
-           <span class="post-count">309(字)</span> 
+           <span class="post-count">300(字)</span> 
          </span>
 		 
 		  <span id="busuanzi_container_page_pv">
@@ -387,16 +387,93 @@
       
 
       
-        <h3 id="Yes-i’m-during-a-Phase-transformation"><a href="#Yes-i’m-during-a-Phase-transformation" class="headerlink" title="Yes,i’m during a Phase transformation,"></a>Yes,i’m during a Phase transformation,</h3><h3 id="Before-two-days-i-break-up-with-my-girlfriends-who-get-along-with-me-about-three-years"><a href="#Before-two-days-i-break-up-with-my-girlfriends-who-get-along-with-me-about-three-years" class="headerlink" title="Before two days, i break up with my girlfriends who get along with me about three years,"></a>Before two days, i break up with my girlfriends who get along with me about three years,</h3><h3 id="Here-i-will-review-some-experience-about-three-years-it’s-realized-a-conclusion-for-me"><a href="#Here-i-will-review-some-experience-about-three-years-it’s-realized-a-conclusion-for-me" class="headerlink" title="Here i will review some experience about three years,it’s realized a conclusion for me,"></a>Here i will review some experience about three years,it’s realized a conclusion for me,</h3><pre><code class="bash">----------------------2015.9.13-------------------
+        <h2 id="生产者和消费者"><a href="#生产者和消费者" class="headerlink" title="生产者和消费者"></a>生产者和消费者</h2><h3 id="问题引入"><a href="#问题引入" class="headerlink" title="问题引入"></a>问题引入</h3><pre><code class="bash">1：生产者和消费者问题的产生;
+2：Object类对多线程的支持;
 </code></pre>
-<p>  this day, i enter a university what be expected by family,everthing is just beginning,and<br>try New things.<br>  So, i join the Student union where to give me love,we know each other in there.<br>i deeply love this girl where in front of my eyes,i beginning chat with her until midnight,<br>she enjoyed.So,i think it’s a good time that i can make an appointment ,We met on the<br>porch bridge behind the school. We talked about our ideal life and the university.<br>In the first place. When I asked her if she was thinking about dating in college, she<br>refused.And I don’t give up, on my offensive.<br>She gradually recognized me and gave me a two-week test period, which was actually<br>only one week.</p>
-<pre><code class="bash">---------------------2015.10.11-------------------
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><pre><code class="bash">public class Relationship {
+    public static void main(String[] args) {
+          Info info=new Info();
+          new Thread(new Customer(info)).start();
+          new Thread(new Productor(info)).start();
+    }
+
+}
+
+class Info{
+    private String title;
+    private String content;
+
+    public String <span class="function"><span class="title">getTitle</span></span>() {
+        <span class="built_in">return</span> title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String <span class="function"><span class="title">getContent</span></span>() {
+        <span class="built_in">return</span> content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+}
+class Productor implements java.lang.Runnable {//生产者
+    private Info info;
+    public Productor(Info info){
+        this.info=info;
+    }
+    @Override
+    public void <span class="function"><span class="title">run</span></span>() {
+        <span class="keyword">for</span>(int x=0;x&lt;100;x++){
+            <span class="keyword">if</span>(x%2==0){
+                this.info.setTitle(<span class="string">"左"</span>);
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                this.info.setContent(<span class="string">"右"</span>);
+            }<span class="keyword">else</span> {
+                this.info.setTitle(<span class="string">"上"</span>);
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                this.info.setContent(<span class="string">"下"</span>);
+
+            }
+        }
+    }
+}
+class Customer implements java.lang.Runnable {//消费者
+    private Info info;
+    public Customer(Info info){
+        this.info=info;
+    }
+    @Override
+    public void <span class="function"><span class="title">run</span></span>() {
+        <span class="keyword">for</span>(int x=0;x&lt;200;x++){
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.println(this.info.getTitle()+<span class="string">"--"</span>+this.info.getContent());
+        }
+    }
+}
 </code></pre>
-<p>  This day I want to kiss her, by her clever dodge away, the old face dark red, angry<br>and ashamed of me in the space to say disdain oneself</p>
-<pre><code class="bash">---------------------2018.6.11--------------------
+<h3 id="发现问题："><a href="#发现问题：" class="headerlink" title="发现问题："></a>发现问题：</h3><pre><code class="bash">1：取的数据错位
+2：取的数据重复
 </code></pre>
-<p>  That day, at the end of our junior year, we ended up arguing.<br>On second thought, in this relationship, we all pay a lot and love each other deeply.<br>We try to accommodate each other, but,The quarrel has never let the fire out, so I chose<br>to give up, although I still love deeply, but at this time a kind of torture to the soul.<br>only Letting each other go? Love is for mutual comfort.</p>
-<p>  After that, I only remember that there was a quarrel. Yes, there was an endless quarrel.<br>  Please cherish each other’s feelings</p>
+<h3 id="解决重复问题"><a href="#解决重复问题" class="headerlink" title="解决重复问题"></a>解决重复问题</h3><pre><code class="bash">--加入等待与唤醒机制，在Object类里面提供有专门的处理方法
+  |--等待:public final native void <span class="built_in">wait</span>(long var1) throws InterruptedException;
+  |--唤醒第一个等待线程:public final native void notify();
+  |--唤醒全部等待线程:public final native void notifyAll();
+</code></pre>
 
       
     </div>
@@ -415,9 +492,9 @@
 	  <footer class="post-footer">
     
         <div class="copyright" style="clear:both;">
-           <p><span>本文标题:</span><a href="">Our love is too helpless</a></p>
+           <p><span>本文标题:</span><a href="">线程--生产者,消费者模式</a></p>
            <p><span>文章作者:</span><a href="/" title="访问 Lv'tian 的个人博客">Lv'tian</a></p>
-           <p><span>原始链接:</span><a href="" title="Our love is too helpless">http://lvtian123.github.io/2018/06/13/Our-love-is-too-helpless/</a></p>
+           <p><span>原始链接:</span><a href="" title="线程--生产者,消费者模式">http://lvtian123.github.io/2018/07/23/线程-生产者-消费者模式/</a></p>
            <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" title="Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)">Attribution-NonCommercial 4.0</a></p>
            <p><span>若转载，请留以上信息，谢谢合作</span></p>
         </div>
@@ -431,8 +508,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="../../05/多表查询/" rel="next" title="多表查询">
-                <i class="fa fa-chevron-left"></i> 多表查询
+              <a href="../类集/" rel="next" title="类集">
+                <i class="fa fa-chevron-left"></i> 类集
               </a>
             
           </div>
@@ -440,10 +517,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="../../../07/12/递归，类和对象，堆内存和桟内存/" rel="prev" title="递归，类和对象，堆内存和桟内存">
-                递归，类和对象，堆内存和桟内存 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -599,7 +672,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Yes-i’m-during-a-Phase-transformation"><span class="nav-number">1.</span> <span class="nav-text">Yes,i’m during a Phase transformation,</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Before-two-days-i-break-up-with-my-girlfriends-who-get-along-with-me-about-three-years"><span class="nav-number">2.</span> <span class="nav-text">Before two days, i break up with my girlfriends who get along with me about three years,</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Here-i-will-review-some-experience-about-three-years-it’s-realized-a-conclusion-for-me"><span class="nav-number">3.</span> <span class="nav-text">Here i will review some experience about three years,it’s realized a conclusion for me,</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#生产者和消费者"><span class="nav-number">1.</span> <span class="nav-text">生产者和消费者</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题引入"><span class="nav-number">1.1.</span> <span class="nav-text">问题引入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码实现"><span class="nav-number">1.2.</span> <span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#发现问题："><span class="nav-number">1.3.</span> <span class="nav-text">发现问题：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决重复问题"><span class="nav-number">1.4.</span> <span class="nav-text">解决重复问题</span></a></li></ol></li></ol></div>
             
 
           </div>

@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Yes,i’m during a Phase transformation,Before two days, i break up with my girlfriends who get along with me about three years,Here i will review some experience about three years,it’s realized a concl">
+<meta name="description" content="springmvc配置1：mvc:annotation-driven/    2：&amp;lt;context:component-scan base-package=””&amp;gt;&amp;lt;!--自动扫描 @Controller--&amp;gt; 3:&amp;lt;!--处理器映射器 :bean的name作为url进行查找 --&amp;gt; 4:&amp;lt;!--处理器适配器 --&amp;gt;     5:&amp;lt;!-- 视图解">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Our love is too helpless">
-<meta property="og:url" content="http://lvtian123.github.io/2018/06/13/Our-love-is-too-helpless/index.html">
+<meta property="og:title" content="springmvc配置以及执行步骤总结">
+<meta property="og:url" content="http://lvtian123.github.io/2018/07/23/springmvc配置以及执行步骤总结/index.html">
 <meta property="og:site_name" content="l&#39;tian">
-<meta property="og:description" content="Yes,i’m during a Phase transformation,Before two days, i break up with my girlfriends who get along with me about three years,Here i will review some experience about three years,it’s realized a concl">
+<meta property="og:description" content="springmvc配置1：mvc:annotation-driven/    2：&amp;lt;context:component-scan base-package=””&amp;gt;&amp;lt;!--自动扫描 @Controller--&amp;gt; 3:&amp;lt;!--处理器映射器 :bean的name作为url进行查找 --&amp;gt; 4:&amp;lt;!--处理器适配器 --&amp;gt;     5:&amp;lt;!-- 视图解">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-13T03:37:23.542Z">
+<meta property="og:updated_time" content="2018-07-23T11:18:55.597Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Our love is too helpless">
-<meta name="twitter:description" content="Yes,i’m during a Phase transformation,Before two days, i break up with my girlfriends who get along with me about three years,Here i will review some experience about three years,it’s realized a concl">
+<meta name="twitter:title" content="springmvc配置以及执行步骤总结">
+<meta name="twitter:description" content="springmvc配置1：mvc:annotation-driven/    2：&amp;lt;context:component-scan base-package=””&amp;gt;&amp;lt;!--自动扫描 @Controller--&amp;gt; 3:&amp;lt;!--处理器映射器 :bean的name作为url进行查找 --&amp;gt; 4:&amp;lt;!--处理器适配器 --&amp;gt;     5:&amp;lt;!-- 视图解">
 
 
 
@@ -119,14 +119,14 @@
 
 
 
-  <link rel="canonical" href="http://lvtian123.github.io/2018/06/13/Our-love-is-too-helpless/"/>
+  <link rel="canonical" href="http://lvtian123.github.io/2018/07/23/springmvc配置以及执行步骤总结/"/>
 
 
 
 
 <link href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css" rel="stylesheet">
 
-  <title>Our love is too helpless | l'tian</title>
+  <title>springmvc配置以及执行步骤总结 | l'tian</title>
   
 
 
@@ -324,7 +324,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Our love is too helpless</h1>
+          <h1 class="post-title" itemprop="name headline">springmvc配置以及执行步骤总结</h1>
         
 
         <div class="post-meta">
@@ -336,8 +336,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-13T11:31:57+08:00">
-                2018-06-13
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-23T19:16:27+08:00">
+                2018-07-23
               </time>
             
 
@@ -354,7 +354,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">字数统计:</span>
-           <span class="post-count">309(字)</span> 
+           <span class="post-count">217(字)</span> 
          </span>
 		 
 		  <span id="busuanzi_container_page_pv">
@@ -387,17 +387,35 @@
       
 
       
-        <h3 id="Yes-i’m-during-a-Phase-transformation"><a href="#Yes-i’m-during-a-Phase-transformation" class="headerlink" title="Yes,i’m during a Phase transformation,"></a>Yes,i’m during a Phase transformation,</h3><h3 id="Before-two-days-i-break-up-with-my-girlfriends-who-get-along-with-me-about-three-years"><a href="#Before-two-days-i-break-up-with-my-girlfriends-who-get-along-with-me-about-three-years" class="headerlink" title="Before two days, i break up with my girlfriends who get along with me about three years,"></a>Before two days, i break up with my girlfriends who get along with me about three years,</h3><h3 id="Here-i-will-review-some-experience-about-three-years-it’s-realized-a-conclusion-for-me"><a href="#Here-i-will-review-some-experience-about-three-years-it’s-realized-a-conclusion-for-me" class="headerlink" title="Here i will review some experience about three years,it’s realized a conclusion for me,"></a>Here i will review some experience about three years,it’s realized a conclusion for me,</h3><pre><code class="bash">----------------------2015.9.13-------------------
+        <h2 id="springmvc配置"><a href="#springmvc配置" class="headerlink" title="springmvc配置"></a>springmvc配置</h2><h3 id="1：mvc-annotation-driven"><a href="#1：mvc-annotation-driven" class="headerlink" title="1：mvc:annotation-driven/"></a>1：<a href="mvc:annotation-driven/" target="_blank" rel="noopener">mvc:annotation-driven/</a></h3>   <!--代替 注解适配器 ,注解映射器 //默认加载很多参数的绑定方法 -->
+<h3 id="2：-lt-context-component-scan-base-package-””-gt"><a href="#2：-lt-context-component-scan-base-package-””-gt" class="headerlink" title="2：&lt;context:component-scan base-package=””&gt;"></a>2：&lt;context:component-scan base-package=””&gt;</h3><pre><code>&lt;!--自动扫描 @Controller--&gt;
+</code></pre><h3 id="3"><a href="#3" class="headerlink" title="3:"></a>3:<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean></h3><pre><code>&lt;!--处理器映射器 :bean的name作为url进行查找 --&gt;
+</code></pre><h3 id="4"><a href="#4" class="headerlink" title="4:"></a>4:<bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"></bean></h3><pre><code>&lt;!--处理器适配器 --&gt;    
+</code></pre><h3 id="5"><a href="#5" class="headerlink" title="5:"></a>5:<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"></bean></h3><pre><code>&lt;!-- 视图解析器 --&gt;
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">	</span><br><span class="line">## 通过前端控制器分析springmvc执行步骤	</span><br><span class="line"></span><br><span class="line">### 第一步:前端控制器接收请求,调用doDispatch</span><br><span class="line">``` bash</span><br><span class="line">	protected void doDispatch(HttpServletRequest request, HttpServletResponse response) throws Exception &#123;</span><br><span class="line">		HttpServletRequest processedRequest = request;</span><br><span class="line">		HandlerExecutionChain mappedHandler = null;</span><br><span class="line">		boolean multipartRequestParsed = false;｝</span><br></pre></td></tr></table></figure>
+<h3 id="第二步-前端控制器调用处理器映射器查找-Handler-并返回Handler"><a href="#第二步-前端控制器调用处理器映射器查找-Handler-并返回Handler" class="headerlink" title="第二步:前端控制器调用处理器映射器查找 Handler 并返回Handler"></a>第二步:前端控制器调用处理器映射器查找 Handler 并返回Handler</h3><pre><code class="bash">    查找 Handler：mappedHandler = getHandler(processedRequest);
+                    <span class="keyword">if</span> (mappedHandler == null || mappedHandler.getHandler() == null) {
+                        noHandlerFound(processedRequest, response);
+                        <span class="built_in">return</span>;
+                    }
+    返回Handler：protected HandlerExecutionChain getHandler(HttpServletRequest request) throws Exception {
+                    <span class="keyword">for</span> (HandlerMapping hm : this.handlerMappings) {
+                        <span class="keyword">if</span> (logger.isTraceEnabled()) {
+                            logger.trace(
+                                    <span class="string">"Testing handler map ["</span> + hm + <span class="string">"] in DispatcherServlet with name '"</span> + getServletName() + <span class="string">"'"</span>);
+                        }
+                        HandlerExecutionChain handler = hm.getHandler(request);
+                        <span class="keyword">if</span> (handler != null) {
+                            <span class="built_in">return</span> handler;
+                        }
+                    }
+                    <span class="built_in">return</span> null;
+```                }
+<span class="comment">### 第三步:调用处理器适配器执行Handler，得到ModelAndView</span>
+``` bash
+                mv = ha.handle(processedRequest, response, mappedHandler.getHandler());
 </code></pre>
-<p>  this day, i enter a university what be expected by family,everthing is just beginning,and<br>try New things.<br>  So, i join the Student union where to give me love,we know each other in there.<br>i deeply love this girl where in front of my eyes,i beginning chat with her until midnight,<br>she enjoyed.So,i think it’s a good time that i can make an appointment ,We met on the<br>porch bridge behind the school. We talked about our ideal life and the university.<br>In the first place. When I asked her if she was thinking about dating in college, she<br>refused.And I don’t give up, on my offensive.<br>She gradually recognized me and gave me a two-week test period, which was actually<br>only one week.</p>
-<pre><code class="bash">---------------------2015.10.11-------------------
-</code></pre>
-<p>  This day I want to kiss her, by her clever dodge away, the old face dark red, angry<br>and ashamed of me in the space to say disdain oneself</p>
-<pre><code class="bash">---------------------2018.6.11--------------------
-</code></pre>
-<p>  That day, at the end of our junior year, we ended up arguing.<br>On second thought, in this relationship, we all pay a lot and love each other deeply.<br>We try to accommodate each other, but,The quarrel has never let the fire out, so I chose<br>to give up, although I still love deeply, but at this time a kind of torture to the soul.<br>only Letting each other go? Love is for mutual comfort.</p>
-<p>  After that, I only remember that there was a quarrel. Yes, there was an endless quarrel.<br>  Please cherish each other’s feelings</p>
-
+<h3 id="第四步-将model填充到request域"><a href="#第四步-将model填充到request域" class="headerlink" title="第四步:将model填充到request域"></a>第四步:将model填充到request域</h3>
       
     </div>
     
@@ -415,9 +433,9 @@
 	  <footer class="post-footer">
     
         <div class="copyright" style="clear:both;">
-           <p><span>本文标题:</span><a href="">Our love is too helpless</a></p>
+           <p><span>本文标题:</span><a href="">springmvc配置以及执行步骤总结</a></p>
            <p><span>文章作者:</span><a href="/" title="访问 Lv'tian 的个人博客">Lv'tian</a></p>
-           <p><span>原始链接:</span><a href="" title="Our love is too helpless">http://lvtian123.github.io/2018/06/13/Our-love-is-too-helpless/</a></p>
+           <p><span>原始链接:</span><a href="" title="springmvc配置以及执行步骤总结">http://lvtian123.github.io/2018/07/23/springmvc配置以及执行步骤总结/</a></p>
            <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" title="Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)">Attribution-NonCommercial 4.0</a></p>
            <p><span>若转载，请留以上信息，谢谢合作</span></p>
         </div>
@@ -431,8 +449,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="../../05/多表查询/" rel="next" title="多表查询">
-                <i class="fa fa-chevron-left"></i> 多表查询
+              <a href="../spring相关/" rel="next" title="spring相关">
+                <i class="fa fa-chevron-left"></i> spring相关
               </a>
             
           </div>
@@ -441,8 +459,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="../../../07/12/递归，类和对象，堆内存和桟内存/" rel="prev" title="递归，类和对象，堆内存和桟内存">
-                递归，类和对象，堆内存和桟内存 <i class="fa fa-chevron-right"></i>
+              <a href="../复习springmvc相应组件/" rel="prev" title="复习springmvc相应组件">
+                复习springmvc相应组件 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -599,7 +617,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Yes-i’m-during-a-Phase-transformation"><span class="nav-number">1.</span> <span class="nav-text">Yes,i’m during a Phase transformation,</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Before-two-days-i-break-up-with-my-girlfriends-who-get-along-with-me-about-three-years"><span class="nav-number">2.</span> <span class="nav-text">Before two days, i break up with my girlfriends who get along with me about three years,</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Here-i-will-review-some-experience-about-three-years-it’s-realized-a-conclusion-for-me"><span class="nav-number">3.</span> <span class="nav-text">Here i will review some experience about three years,it’s realized a conclusion for me,</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#springmvc配置"><span class="nav-number">1.</span> <span class="nav-text">springmvc配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1：mvc-annotation-driven"><span class="nav-number">1.1.</span> <span class="nav-text">1：mvc:annotation-driven/</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2：-lt-context-component-scan-base-package-””-gt"><span class="nav-number">1.2.</span> <span class="nav-text">2：&lt;context:component-scan base-package=””&gt;</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3"><span class="nav-number">1.3.</span> <span class="nav-text">3:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4"><span class="nav-number">1.4.</span> <span class="nav-text">4:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5"><span class="nav-number">1.5.</span> <span class="nav-text">5:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第二步-前端控制器调用处理器映射器查找-Handler-并返回Handler"><span class="nav-number">1.6.</span> <span class="nav-text">第二步:前端控制器调用处理器映射器查找 Handler 并返回Handler</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第四步-将model填充到request域"><span class="nav-number">1.7.</span> <span class="nav-text">第四步:将model填充到request域</span></a></li></ol></li></ol></div>
             
 
           </div>
